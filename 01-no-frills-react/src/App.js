@@ -14,6 +14,7 @@ const App = () => {
     }),
     React.createElement(Pizza, {
       name: "The Hawaiian Pizza",
+
       description: "Sliced Ham, Pineapple, Mozzarella Cheese",
     }),
     React.createElement(Pizza, {

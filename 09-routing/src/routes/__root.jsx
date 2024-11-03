@@ -12,6 +12,8 @@ export const Route = createRootRoute({
       <>
         <CartContext.Provider value={cartHook}>
           <div>
+
+
             <Header />
             <Outlet />
             <PizzaOfTheDay />
