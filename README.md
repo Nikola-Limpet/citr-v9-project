@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Complete Intro to React, v9 Course
 
 This is a companion repository for the [Complete Intro to React, v9][fem] course on Frontend Masters.
@@ -35,3 +36,13 @@ The code, including the code of the site itself and the code in the exercises, a
 
 [React icons created by Pixel perfect - Flaticon](https://www.flaticon.com/free-icons/react)
 
+=======
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+>>>>>>> 709af32 (add static order page)
