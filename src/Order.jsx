@@ -4,6 +4,14 @@ import Pizza from "./Pizza";
 export default function Order() {
   const [pizzaType, setPizzaType] = useState("pepperoni")
   const [pizzaSize, setPizzaSize] = useState("M")
+
+  const handleType = (e) => {
+    setPizzaType(e.target.value)
+    console.log(pizzaType)
+  }
+  const handleSize = (e) => {
+    setPizzaSize(e.target.value)
+  }
   return (
     <div className="order">
       <h2> Create Order </h2>
@@ -11,7 +19,9 @@ export default function Order() {
         <div>
           <div>
             <label htmlFor="pizza-type"> Pizza Type</label>
-            <select name="pizza-type" value={pizzaType}>
+            <select name="pizza-type"
+              onChange={handleType}
+              value={pizzaType}>
               <option value="peperoni"> The Peperoni Pizza</option>
               <option value="hawaiian"> The Hawaiian Pizza</option>
               <option value="big_meat"> The Big Meat Pizza</option>
@@ -19,13 +29,14 @@ export default function Order() {
           </div>
           <div>
             <label htmlFor="pizza-size">Pizza Size</label>
-            <div>
+            <div >
               <span>
                 <input
                   checked={pizzaSize === "S"}
                   type="radio"
                   name="pizza-size"
                   value="S"
+                  onChange={handleSize}
                   id="pizza-s" />
                 <label htmlFor="pizza-s">Small</label>
               </span>
@@ -35,6 +46,7 @@ export default function Order() {
                   type="radio"
                   name="pizza-size"
                   value="M"
+                  onChange={handleSize}
                   id="pizza-m" />
                 <label htmlFor="pizza-m">Medium</label>
               </span>
@@ -44,6 +56,7 @@ export default function Order() {
                   type="radio"
                   name="pizza-size"
                   value="L"
+                  onChange={handleSize}
                   id="pizza-l" />
                 <label htmlFor="pizza-l">Large</label>
               </span>
@@ -52,7 +65,7 @@ export default function Order() {
           <button type="submit" >Add to Cart</button>
           <div className="order-pizza">
             <Pizza
-              name="Pepperoni"
+              name={pizzaType}
               description="another pep pizza"
               image="/public/pizzas/pepperoni.webp"
             />
