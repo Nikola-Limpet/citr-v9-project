@@ -1,13 +1,13 @@
 
-const Pizza = (props) => {
+const Pizza = ({ name, description, image }) => {
 
   return (
     <div className="pizza" onClick={() => { }} >
       <h1>
-        {props.name}
+        {name}
       </h1>
-      <p>{props.description}</p>
-      <img src={props.image} alt={props.name} />
+      <p>{description}</p>
+      <img src={image} alt={name} />
     </div>
   );
 };
