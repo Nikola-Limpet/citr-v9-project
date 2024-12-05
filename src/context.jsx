@@ -1,4 +1,4 @@
 import { createContext } from "react";
 
 
-export const createContext = createContext([[], function () { }])
+export const CartContext = createContext([[], function () { }])
